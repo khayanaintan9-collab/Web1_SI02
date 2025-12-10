@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Biodata Dinamis - Tugas 1</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Biodata Mahasiswa</h2>
+
+    <img id="foto" src="foto1.jpg" alt="Foto Profil" width="300" height="500">
+
+    <p><strong>Nama:</strong> <span id="nama">Khayana Tantri</span></p>
+    <p><strong>NIM:</strong> <span id="nim">0110125116</span></p>
+    <p><strong>Program Studi:</strong> <span id="prodi">Sistem Informasi</span></p>
+
+
+
+    <button onclick="ubahNama()">Ubah Nama</button>
+    <button onclick="ubahProdi()">Ubah Program Studi</button>
+    <button onclick="gantiFoto()">Ganti Foto</button>
+    <button onclick="sembunyikan()">Sembunyikan Biodata</button>
+    <button onclick="tampilkan()">Tampilkan Biodata</button>
+</div>
+
+<script>
+    function ubahNama() {
+        const namaBaru = prompt("Masukkan nama baru:");
+        if (namaBaru) document.getElementById("nama").innerHTML = namaBaru;
+    }
+
+    function ubahProdi() {
+        const prodiBaru = prompt("Masukkan program studi baru:");
+        if (prodiBaru) document.getElementById("prodi").innerHTML = prodiBaru;
+    }
+
+    function gantiFoto() {
+        const urlFoto = prompt("Masukkan URL foto baru:");
+        if (urlFoto) document.getElementById("foto").src = urlFoto;
+    }
+
+    function sembunyikan() {
+        document.querySelector(".container").style.display = "none";
+    }
+
+    function tampilkan() {
+        document.querySelector(".container").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
